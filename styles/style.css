@@ -1,0 +1,298 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Spartan;
+    src: url('./fonts/LeagueSpartan-VariableFont_wght.ttf');
+}
+
+body{
+    font-family: Spartan;
+}
+
+#header{
+    display: flex;
+    width: 100%;
+  
+}
+
+#menu{
+    background-image: url(../images/desktop-image-hero-1.jpg);
+    background-repeat: no-repeat;
+    min-height: 530px;
+    padding-left: 60px;
+    padding-top: 60px; 
+    width: 64%   
+}
+
+#description-page{
+    width: 30%;
+    
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 120px;
+    position: relative;
+}
+
+#menu-items{
+    display: flex;
+}
+
+#menu-items > #nav {
+    margin-left: 30px;
+}
+
+#menu-items > #nav > li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 30px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+#menu-items > #nav > li::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    width: 50%;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+#menu-items > #nav > li:hover::after{
+    border-color: white;
+}
+
+#menu-items > #nav > li > a{
+    text-decoration: none;
+    color: white;
+    
+}
+
+
+.slider-2{
+    display: none;
+}
+
+.slider-3{
+    display: none;
+}
+
+.slider-item h1 {
+    font-size: 42px;
+}
+
+.slider-item p{
+    margin-top: 20px;
+    line-height: 20px;
+    color: #ABABAB;
+}
+
+.slider-item span{
+    display: block;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.slider-item span:hover{
+    color: #ABABAB;
+}
+
+.slider-item span:hover .icon-shop{
+    fill: #ABABAB;
+}
+
+
+
+#options-slider{
+    background-color: black;
+    width:44%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: -100px;
+}
+
+#options-slider > .option{
+    display: block;
+    background-color: transparent;
+    width: 50%;
+    height: 100%;
+    cursor: pointer;
+}
+
+#options-slider > .option:hover{
+    background-color: #444444;
+}
+
+
+
+
+
+#content{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+
+
+#context-description{
+    width: 40%;
+    padding-top: 60px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+
+#context-description h3 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+#context-description p {
+    color: #ABABAB;
+    line-height: 20px;
+}
+
+#content > .img-content{
+    width: 30%;
+    height: 260px;
+}
+
+
+
+#content > .img-content img{
+    width: 100%;
+}
+
+
+#options-slider-mobile{
+    display: none;
+}
+
+
+/*animaciones*/
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .fade-in.active {
+    opacity: 1;
+  }
+
+
+  #logo-mobile {
+      display: none;
+  }
+
+
+
+  @media  (max-width: 375px){
+    #header{
+        flex-direction: column;
+    }
+    
+    
+    #menu{
+        position: relative;
+        background-image: url(../images/mobile-image-hero-1.jpg);
+        background-repeat: no-repeat;
+        min-height: 400px;
+        padding-left: 20px;
+        padding-top: 40px; 
+        width: 100%   
+    }
+
+
+    #description-page{
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        padding-left: 40px;
+        padding-right: 40px;
+        margin-bottom: 50px;
+        position: relative;
+    }
+
+    #options-slider{
+        display: none;
+    }
+
+
+    #content{
+        flex-direction: column;
+    }
+
+
+    #content > .img-content{
+        width: 100%;
+    }
+
+
+    #context-description{
+        width: 100%;
+        padding-top: 20px;
+        padding-left: 40px;
+        padding-right: 40px;
+        margin-bottom: 40px;
+    }
+
+    .slider-item h1 {
+        font-size: 30px;
+    }
+
+    #nav{
+        display: none;
+    }
+
+    #logo{
+        display: none;
+    }
+
+    #logo-mobile {
+        display: block;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+
+    #menu-item{
+        opacity: 0;
+    }
+
+    #options-slider-mobile{
+        background-color: black;
+    width:30%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 40px;
+    right: 0;
+    }
+
+
+    #options-slider-mobile .option{
+        display: block;
+        background-color: black;
+        width: 50%;
+        height: 100%;
+        cursor: pointer;
+    }
+  }
+
